@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KeyForge — Password Generator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="blueprint-grid"></div>
+
+  <div class="layout">
+
+    <aside class="info-col">
+      <div class="brand">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="1.6"/>
+          <rect x="4.5" y="11" width="15" height="9" rx="1" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="12" cy="15.2" r="1.3" fill="currentColor"/>
+        </svg>
+        <span class="brand-name">KeyForge</span>
+      </div>
+
+      <p class="eyebrow">Security tool</p>
+      <h1 class="headline">Forge a password<br>nothing can guess.</h1>
+      <p class="blurb">Most leaked passwords are short, reused, or guessable. KeyForge mixes character sets and shuffles order every time — no pattern to crack, no two passwords alike.</p>
+
+      <footer class="footer">
+        <div class="owner">
+          <p class="owner-name">Aswini R</p>
+          <p class="owner-email">raswini2024@gmail.com</p>
+        </div>
+        <a class="dh-btn" href="https://digitalheroesco.com" target="_blank" rel="noopener">Built for Digital Heroes</a>
+      </footer>
+    </aside>
+
+    <main class="tool-frame" id="toolFrame">
+
+      <section class="display-row">
+        <div class="output" id="output" aria-live="polite">P4ssw0rd!</div>
+        <button class="icon-btn" id="copyBtn" title="Copy to clipboard">
+          <span id="copyLabel">Copy</span>
+        </button>
+      </section>
+
+      <section class="strength-row">
+        <div class="strength-track">
+          <div class="strength-fill" id="strengthFill"></div>
+        </div>
+        <span class="strength-label" id="strengthLabel">—</span>
+      </section>
+
+      <section class="controls">
+
+        <div class="control-row length-row">
+          <label for="length">Length</label>
+          <span class="length-value" id="lengthValue">14</span>
+          <input type="range" id="length" min="6" max="32" value="14">
+        </div>
+
+        <div class="control-grid">
+          <label class="check">
+            <input type="checkbox" id="uppercase" checked>
+            <span>A–Z Uppercase</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" id="lowercase" checked>
+            <span>a–z Lowercase</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" id="numbers" checked>
+            <span>0–9 Numbers</span>
+          </label>
+          <label class="check">
+            <input type="checkbox" id="symbols">
+            <span>!@# Symbols</span>
+          </label>
+        </div>
+
+        <button class="generate-btn" id="generateBtn">Forge new password</button>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
